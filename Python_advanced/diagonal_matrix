@@ -1,0 +1,14 @@
+s = input().split()
+row, col = int(s[0]), int(s[1])
+mat = [[0] * col for _ in range(row)]
+count = 0
+num = 1
+for count in range(col * row):
+        for i in range(row):
+            for j in range(col):
+                if i + j == count:
+                    mat[i][j] = num
+                    num += 1
+            
+for i in range(row):
+    print(*mat[i]) 
